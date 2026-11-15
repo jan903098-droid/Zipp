@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#05070d">
+<title>ZIPP — Short videos, big energy</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#05070d;color:#fff;font-family:Arial,sans-serif}
+header{padding:18px 20px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #202638}
+.logo{font-size:28px;font-weight:900;letter-spacing:2px;color:#25a7ff}
+header span{font-size:12px;color:#9aa8bd}
+main{max-width:560px;margin:auto;padding:18px}
+.intro{padding:24px 4px 18px}.intro h1{font-size:34px;line-height:1.05;margin:0 0 10px}
+.intro p{color:#aab6c9;line-height:1.5;margin:0}
+.feed{height:min(64vh,620px);min-height:420px;overflow-y:auto;scroll-snap-type:y mandatory;border-radius:22px}
+.slide{height:100%;min-height:420px;scroll-snap-align:start;display:flex;flex-direction:column;justify-content:space-between;padding:22px;background:linear-gradient(145deg,#071d46,#075bb5 55%,#05070d)}
+.slide:nth-child(2){background:linear-gradient(145deg,#190d3d,#5b21b6 55%,#05070d)}
+.slide:nth-child(3){background:linear-gradient(145deg,#063b3a,#087f8c 55%,#05070d)}
+.tag{font-size:12px;letter-spacing:2px;color:#d7edff}.center{text-align:center;margin:auto}
+.center strong{display:block;font-size:clamp(34px,8vw,54px);letter-spacing:-2px}
+.center small{color:#d6e8ff}.bottom{display:flex;justify-content:space-between;align-items:end}
+.handle{font-weight:bold}.caption{font-size:14px;color:#e0eaff;margin-top:7px}
+.like{border:1px solid #ffffff66;background:#07101c88;color:white;border-radius:24px;padding:12px 16px;font-size:16px}
+footer{text-align:center;color:#718098;font-size:12px;padding:18px}
+.note{font-size:12px;color:#8d9bb0;line-height:1.5;margin-top:14px}
+</style>
+</head>
+<body>
+<header><div class="logo">ZIPP</div><span>SHORT VIDEOS · BIG ENERGY</span></header>
+<main>
+<section class="intro"><h1>Scroll into something new.</h1><p>A first look at ZIPP — a place for quick videos, fresh ideas and creative people.</p></section>
+<section class="feed" aria-label="ZIPP sample video feed">
+<article class="slide"><div class="tag">ZIPP / 001</div><div class="center"><strong>YOUR NEXT<br>FAVOURITE</strong><small>starts with a swipe</small></div><div class="bottom"><div><div class="handle">@zipp</div><div class="caption">Welcome to the ZIPP preview ⚡</div></div><button class="like" onclick="like(this)">♡ <span>0</span></button></div></article>
+<article class="slide"><div class="tag">ZIPP / 002</div><div class="center"><strong>MAKE<br>IT YOURS</strong><small>ideas move fast here</small></div><div class="bottom"><div><div class="handle">@create</div><div class="caption">A space for your creativity.</div></div><button class="like" onclick="like(this)">♡ <span>0</span></button></div></article>
+<article class="slide"><div class="tag">ZIPP / 003</div><div class="center"><strong>THIS IS<br>JUST THE START</strong><small>more to come</small></div><div class="bottom"><div><div class="handle">@community</div><div class="caption">ZIPP is getting ready to grow.</div></div><button class="like" onclick="like(this)">♡ <span>0</span></button></div></article>
+</section>
+<p class="note">Preview only: these are sample screens. Accounts, real video uploads, comments shared between people, and public hosting are not connected yet.</p>
+</main>
+<footer>© ZIPP · Built for the next scroll</footer>
+<script>
+function like(btn){const s=btn.querySelector('span');let n=Number(s.textContent);n++;s.textContent=n;btn.firstChild.textContent='♥ ';}
+</script>
+</body></html>
